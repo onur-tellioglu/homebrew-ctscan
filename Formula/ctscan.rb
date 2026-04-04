@@ -6,9 +6,9 @@ class Ctscan < Formula
   license "MIT"
 
   def install
-    # Ensure script is executable (GitHub tarballs don't preserve execute bits)
-    chmod 0755, "bin/ctscan"
     bin.install "bin/ctscan"
+    # Ensure script is executable (GitHub tarballs don't preserve execute bits)
+    chmod 0755, bin/"ctscan"
   end
 
   test do
