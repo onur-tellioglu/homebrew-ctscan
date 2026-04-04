@@ -1,8 +1,8 @@
 class Ctscan < Formula
   desc "macOS system health scanner"
   homepage "https://github.com/onur-tellioglu/ctscan"
-  url "https://github.com/onur-tellioglu/ctscan/archive/refs/tags/v0.3.5.tar.gz"
-  sha256 "4b0f99c8bac55e34268f6d8eab328cb7f27008cacc479395a76b3e7d4b86db53"
+  url "https://github.com/onur-tellioglu/ctscan/archive/refs/tags/v0.3.6.tar.gz"
+  sha256 "6a6fa700fd0700755f9e89ff15fd43c89368e5a9affa05eaabc69ea14540f105"
   license "MIT"
 
   def install
