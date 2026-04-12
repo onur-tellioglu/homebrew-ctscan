@@ -5,7 +5,10 @@ class Ctscan < Formula
   sha256 "d5b6234609707dd1b4a2a0f51c07518a3544b2dd920cbfa2c9872e0d84b8a04a"
   license "MIT"
 
+  depends_on "bash"
+
   def install
+    inreplace "bin/ctscan", "#!/usr/bin/env bash", "#!#{Formula["bash"].opt_bin}/bash"
     libexec.install "bin/ctscan"
     # Wrap in an executable script since GitHub tarballs don't preserve +x
     (bin/"ctscan").write_env_script libexec/"ctscan", {}
