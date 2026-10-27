@@ -8,13 +8,13 @@ class Ctscan < Formula
   depends_on "bash"
 
   def install
-    inreplace "bin/ctscan", "#!/usr/bin/env bash", "#!#{Formula["bash"].opt_bin}/bash"
+    inreplace "bin/ctscan", "#!/usr/bin/env bash", "#!#{formula_opt_bin("bash")}/bash"
     libexec.install "bin/ctscan"
     # Wrap in an executable script since GitHub tarballs don't preserve +x
     (bin/"ctscan").write_env_script libexec/"ctscan", {}
   end
 
   test do
-    system "#{bin}/ctscan", "--version"
+    system bin/"ctscan", "--version"
   end
 end
